@@ -422,7 +422,8 @@ a {
 }
 
 .pi-photo {
-  min-height: 520px;
+  aspect-ratio: 4 / 5;
+  
   border-radius: 32px;
   overflow: hidden;
   border: 1px solid var(--gray-200);
