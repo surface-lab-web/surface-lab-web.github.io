@@ -137,10 +137,14 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  height: 46px;
   padding: 13px 22px;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 600;
+
+  box-sizing: border-box;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
