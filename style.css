@@ -167,6 +167,11 @@ a {
   background: var(--black);
   color: var(--white);
   margin-top: 24px;
+
+.white-button {
+  background: var(--white);
+  color: var(--dark);
+  margin-top: 24px;
 }
 
 .image-placeholder {
