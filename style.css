@@ -425,8 +425,7 @@ a {
 
   border-radius: 32px;
   overflow: hidden;
-  border: 1px solid var(--gray-200);
-  
+    
   margin-left: auto;
   margin-right: auto;
 }
@@ -439,10 +438,12 @@ a {
 }
 
 .pi-info {
+  /*
   border: 1px solid var(--gray-200);
   border-radius: 32px;
   padding: 44px;
   background: var(--white);
+  */
 }
 
 .pi-info h3 {
