@@ -415,7 +415,7 @@ a {
 /* Team Section */
 .pi-profile {
   display: grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: 380px 1fr; 
   align-items: start;
 }
 
