@@ -415,13 +415,12 @@ a {
 /* Team Section */
 .pi-profile {
   display: grid;
-  grid-template-columns: 480px 1fr;
-  gap: 48px;
+  grid-template-columns: 420px 1fr;
   align-items: start;
 }
 
 .pi-photo {
-  width: 280px;
+  width: 320px;
   aspect-ratio: 4 / 5;
 
   border-radius: 32px;
