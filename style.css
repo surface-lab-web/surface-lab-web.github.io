@@ -447,7 +447,7 @@ a {
 }
 
 .pi-info h3 {
-  font-size: clamp(36px, 5vw, 58px);
+  font-size: clamp(28px, 4vw, 42px);
   line-height: 1;
   letter-spacing: -0.055em;
   margin-bottom: 14px;
