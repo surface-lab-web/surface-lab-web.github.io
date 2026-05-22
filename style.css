@@ -447,7 +447,7 @@ a {
 }
 
 .pi-info h3 {
-  font-size: clamp(22px, 4vw, 42px);      /* Defines the font size of Dr. Your Name */
+  font-size: clamp(22px, 4vw, 42px);
   line-height: 1;
   letter-spacing: -0.045em;
   margin-bottom: 14px;
@@ -475,13 +475,13 @@ a {
 }
 
 .pi-details h4 {
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 10px;
 }
 
 .pi-details p {
   color: var(--gray-500);
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 8px;
 }
 
