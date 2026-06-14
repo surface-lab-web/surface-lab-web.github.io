@@ -8,12 +8,13 @@
 </head>
 
 <body>
+  <!-- HEADER: fixed top navigation. Mobile menu behavior is in script.js. -->
   <header class="site-header">
     <nav class="nav">
       <a href="./" class="logo">Bio-Inspired Interface Lab</a>
 
       <button class="menu-toggle" aria-label="Toggle navigation">
-        ☰
+        &#9776;
       </button>
 
       <div class="nav-links">
@@ -29,9 +30,10 @@
   </header>
 
   <main>
+    <!-- HOME: first-screen hero text, carousel images, captions, and buttons. -->
     <section id="home" class="hero">
       <div class="hero-content">
-        <p class="eyebrow">Materials Science · Bio-Inspired Design · Micro/Nano Fabrication</p>
+        <p class="eyebrow">Materials Science &middot; Bio-Inspired Design &middot; Micro/Nano Fabrication</p>
         <h1>Designing functional materials inspired by nature</h1>
         <p class="hero-text">
           We study how biological surfaces control wetting, optics, adhesion, and mechanics,
@@ -48,63 +50,97 @@
           <img src="images/hero-1.jpg" class="carousel-slide active" alt="Brochosome-inspired antireflective materials">
           <img src="images/hero-2.jpg" class="carousel-slide" alt="Superhydrophobic nanostructures">
           <img src="images/hero-3.jpg" class="carousel-slide" alt="Micro/nano fabrication">
-
-          <button class="carousel-arrow prev" aria-label="Previous image">‹</button>
-          <button class="carousel-arrow next" aria-label="Next image">›</button>
         </div>
 
-        <p class="carousel-caption">
-          Brochosome-inspired antireflective materials
-        </p>
+        <div class="carousel-footer">
+          <p class="carousel-caption">
+            Brochosome-inspired antireflective materials
+          </p>
 
-        <div class="carousel-dots">
-          <button class="dot active" aria-label="Show image 1"></button>
-          <button class="dot" aria-label="Show image 2"></button>
-          <button class="dot" aria-label="Show image 3"></button>
+          <div class="carousel-controls">
+            <button class="carousel-arrow prev" aria-label="Previous image">&lsaquo;</button>
+
+            <div class="carousel-dots">
+              <button class="dot active" aria-label="Show image 1"></button>
+              <button class="dot" aria-label="Show image 2"></button>
+              <button class="dot" aria-label="Show image 3"></button>
+            </div>
+
+            <button class="carousel-arrow next" aria-label="Next image">&rsaquo;</button>
+          </div>
         </div>
       </div>
-      
     </section>
 
-
-
-
+    <!-- RESEARCH: vision statement followed by three visual research themes. -->
     <section id="research" class="section muted">
       <div class="section-header">
         <h2>Research</h2>
       </div>
 
-      <div class="grid three">
-        <article class="card">
-          <h3>Bio-Inspired Surfaces</h3>
-          <p>
-            Understanding natural surface architectures such as insect cuticles,
-            plant leaves, and biological microstructures.
-          </p>
+      <p class="research-intro">
+        We study how nature controls light, liquids, and interfacial interactions
+        through hierarchical structures and surface chemistry. By uncovering
+        structure-function relationships in biological materials, we develop
+        engineered interfaces with advanced optical, wetting, adhesive, and
+        transport functions.
+      </p>
+
+      <div class="research-theme-list">
+        <article class="research-theme">
+          <div class="research-image-container">
+            <img src="images/research-1.jpg" alt="Biological structures and functional mechanisms">
+          </div>
+
+          <div class="research-theme-content">
+            <span class="research-theme-number">01</span>
+            <h3>Biological Structures and Functional Mechanisms</h3>
+            <p>
+              We investigate hierarchical structures in insects, plants, and other
+              biological systems to understand how they achieve remarkable control
+              of optics, wetting, adhesion, and environmental interactions.
+            </p>
+            <a href="#contact" class="research-theme-link">Learn more</a>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Wetting & Adhesion</h3>
-          <p>
-            Exploring liquid repellency, slippery interfaces, anti-fouling coatings,
-            and robust superhydrophobic materials.
-          </p>
+        <article class="research-theme">
+          <div class="research-image-container">
+            <img src="images/research-2.jpg" alt="Bio-inspired interface engineering">
+          </div>
+
+          <div class="research-theme-content">
+            <span class="research-theme-number">02</span>
+            <h3>Bio-Inspired Interface Engineering</h3>
+            <p>
+              Inspired by biological surfaces, we design and engineer materials
+              with advanced interfacial properties, including superhydrophobicity,
+              liquid repellency, anti-fouling, and directional transport.
+            </p>
+            <a href="#contact" class="research-theme-link">Learn more</a>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Optical Materials</h3>
-          <p>
-            Designing micro/nanostructured materials for antireflection,
-            camouflage, thermal control, and information encoding.
-          </p>
+        <article class="research-theme">
+          <div class="research-image-container">
+            <img src="images/research-3.jpg" alt="Micro/nano fabrication and advanced materials">
+          </div>
+
+          <div class="research-theme-content">
+            <span class="research-theme-number">03</span>
+            <h3>Micro/Nano Fabrication and Advanced Materials</h3>
+            <p>
+              We develop fabrication strategies and material platforms to translate
+              biological principles into engineered surfaces, functional devices,
+              and real-world applications.
+            </p>
+            <a href="#contact" class="research-theme-link">Learn more</a>
+          </div>
         </article>
       </div>
     </section>
 
-    
-    
-    
-    
+    <!-- TEAM: PI profile first, then group member subsections. -->
     <section id="team" class="section">
       <div class="section-header">
         <h2>Team</h2>
@@ -126,7 +162,7 @@
           <p class="pi-bio">
             Dr. Your Name is a materials scientist working at the intersection of
             bio-inspired materials, surface science, and micro/nano fabrication.
-            His research focuses on understanding structure–function relationships
+            His research focuses on understanding structure-function relationships
             in natural materials and translating these principles into engineered
             surfaces with advanced wetting, optical, and interfacial functions.
           </p>
@@ -145,12 +181,11 @@
             </div>
           </div>
 
-
           <div class="profile-links">
-           <a href="#" class="button outline-button">CV</a>
-           <a href="#" class="button outline-button">Google Scholar</a>
-           <a href="#" class="button outline-button">ORCID</a>
-          </div>  
+            <a href="#" class="button outline-button">CV</a>
+            <a href="#" class="button outline-button">Google Scholar</a>
+            <a href="#" class="button outline-button">ORCID</a>
+          </div>
         </div>
       </div>
 
@@ -159,74 +194,70 @@
 
         <div class="grid three">
           <article class="person-card">
-            <div class="avatar"></div>
+            <img class="avatar" src="images/person icon.png" alt="Profile photo">
             <h3>Dr. XXX XX</h3>
             <p>Open positions for students interested in surface science and micro/nano fabrication.</p>
           </article>
 
           <article class="person-card">
-            <div class="avatar"></div>
+            <img class="avatar" src="images/person icon.png" alt="Profile photo">
             <h3>Dr. XXX XX</h3>
             <p>Opportunities available for motivated students interested in hands-on research.</p>
           </article>
 
           <article class="person-card">
-            <div class="avatar"></div>
+            <img class="avatar" src="images/person icon.png" alt="Profile photo">
             <h3>Dr. XXX XX</h3>
             <p>Former group members and visiting researchers.</p>
           </article>
         </div>
       </div>
-            
+
       <div class="team-subsection">
         <h3>Students</h3>
 
         <div class="grid three">
           <article class="person-card">
-            <div class="avatar"></div>
+            <img class="avatar" src="images/person icon.png" alt="Profile photo">
             <h3>Graduate Students</h3>
             <p>Open positions for students interested in surface science and micro/nano fabrication.</p>
           </article>
 
           <article class="person-card">
-            <div class="avatar"></div>
+            <img class="avatar" src="images/person icon.png" alt="Profile photo">
             <h3>Undergraduate Researchers</h3>
             <p>Opportunities available for motivated students interested in hands-on research.</p>
           </article>
 
           <article class="person-card">
-            <div class="avatar"></div>
+            <img class="avatar" src="images/person icon.png" alt="Profile photo">
             <h3>Alumni</h3>
             <p>Former group members and visiting researchers.</p>
           </article>
         </div>
       </div>
     </section>
-    
-    
-    
-    
-    
+
+    <!-- PUBLICATIONS: copy one .publication article block to add a new paper. -->
     <section id="publications" class="section muted">
       <div class="section-header">
         <h2>Publications</h2>
       </div>
 
       <div class="publication-list">
-
         <article class="publication">
           <span class="pub-number">01</span>
 
           <div class="pub-content">
             <h3>Bio-inspired structured materials for advanced interfacial functions</h3>
             <p class="pub-meta">
-               <span class="author-highlight">Your Name</span>, 
-               Author A,
-               Author B*
-               ·
-               <span class="journal-name">Nature Materials</span>, 2026 
+              <span class="author-highlight">Your Name</span>,
+              Author A,
+              Author B*
+              &middot;
+              <span class="journal-name">Nature Materials</span>, 2026
             </p>
-            
+
             <p class="pub-note">
               [Editor-invited Insightful Article]
             </p>
@@ -234,16 +265,14 @@
               <a href="https://www.wikipedia.org/"
                  target="_blank"
                  rel="noopener noreferrer"
-                 >Article</a>
-              <a href="https://www.wikipedia.org/" 
+              >Article</a>
+              <a href="https://www.wikipedia.org/"
                  target="_blank"
                  rel="noopener noreferrer"
-                 >News</a>
+              >News</a>
             </div>
-
           </div>
         </article>
-
 
         <article class="publication">
           <span class="pub-number">02</span>
@@ -251,11 +280,11 @@
           <div class="pub-content">
             <h3>Micro/nano-structured surfaces for optical and wetting control</h3>
             <p class="pub-meta">
-               Author A,
-               <span class="author-highlight">Your Name</span>,
-               Author B*
-               ·
-               <span class="journal-name">PNAS</span>, 2026
+              Author A,
+              <span class="author-highlight">Your Name</span>,
+              Author B*
+              &middot;
+              <span class="journal-name">PNAS</span>, 2026
             </p>
             <p class="pub-note">
               [Cover Article]
@@ -265,27 +294,26 @@
               <a href="https://www.wikipedia.org/"
                  target="_blank"
                  rel="noopener noreferrer"
-                 >Articles</a>
-              <a href="https://www.wikipedia.org/" 
+              >Articles</a>
+              <a href="https://www.wikipedia.org/"
                  target="_blank"
                  rel="noopener noreferrer"
-                 >News</a>
+              >News</a>
             </div>
           </div>
         </article>
 
-        
         <article class="publication">
           <span class="pub-number">03</span>
 
           <div class="pub-content">
             <h3>Micro/nano-structured surfaces for optical and wetting control</h3>
             <p class="pub-meta">
-               Author A,
-               <span class="author-highlight">Your Name</span>,
-               Author B*
-               ·
-               <span class="journal-name">Nature Materials</span>, 2026
+              Author A,
+              <span class="author-highlight">Your Name</span>,
+              Author B*
+              &middot;
+              <span class="journal-name">Nature Materials</span>, 2026
             </p>
             <p class="pub-note">
               [Cover Article]
@@ -295,23 +323,20 @@
               <a href="https://www.wikipedia.org/"
                  target="_blank"
                  rel="noopener noreferrer"
-                 >Articles</a>
-              <a href="https://www.wikipedia.org/" 
+              >Articles</a>
+              <a href="https://www.wikipedia.org/"
                  target="_blank"
                  rel="noopener noreferrer"
-                 >News</a>
+              >News</a>
             </div>
           </div>
         </article>
 
-        
-        <!-- More publications can be added here -->
+        <!-- More publications can be added here. -->
       </div>
     </section>
 
-    
-    
-
+    <!-- NEWS: newest lab updates should stay at the top. -->
     <section id="news" class="section">
       <div class="section-header">
         <h2>News</h2>
@@ -333,6 +358,7 @@
       </div>
     </section>
 
+    <!-- JOIN: recruiting message and contact call-to-action. -->
     <section id="join" class="section muted">
       <div class="join-box">
         <h2>Join Us</h2>
@@ -345,6 +371,7 @@
       </div>
     </section>
 
+    <!-- CONTACT: lab email, office, and location. -->
     <section id="contact" class="section contact-section">
       <div class="section-header">
         <h2>Contact Us</h2>
@@ -368,7 +395,7 @@
   </main>
 
   <footer class="footer">
-    <p>© 2026 Bio-Inspired Interface Lab. All rights reserved.</p>
+    <p>&copy; 2026 Bio-Inspired Interface Lab. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
