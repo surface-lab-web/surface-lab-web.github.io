@@ -726,6 +726,24 @@ a {
    to find above, and small-screen behavior is easy to audit here.
    ========================================================================== */
 @media (max-width: 850px) {
+  /* On small screens, .section already supplies the shared 24px page margin.
+     Remove the second muted-section inset so all sections align consistently. */
+  .section.muted > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Use a more generous mobile margin for the main content sections.
+     Team keeps the shared .section margin of 24px. */
+  #research,
+  #publications,
+  #news,
+  #join,
+  #contact {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
   .menu-toggle {
     display: block;
   }
