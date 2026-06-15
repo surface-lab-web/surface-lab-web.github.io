@@ -43,22 +43,20 @@ a {
    These classes are used by multiple homepage sections.
    ========================================================================== */
 .section {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 110px 24px;
-}
-
-.section.muted {
   max-width: none;
-  background: var(--gray-100);
+  padding: 110px 0;
 }
 
-.section.muted > * {
+.section > * {
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
   padding-left: 24px;
   padding-right: 24px;
+}
+
+.section.muted {
+  background: var(--gray-100);
 }
 
 .section-header {
@@ -359,7 +357,9 @@ a {
    Research-specific layout only. Global section/header/card styles stay intact.
    ========================================================================== */
 .research-intro {
-  max-width: 850px;
+  /* Match the shared section content width instead of forming a narrow,
+     centered text column. */
+  max-width: var(--max-width);
   color: var(--gray-500);
   font-size: 20px;
   line-height: 1.62;
@@ -726,20 +726,15 @@ a {
    to find above, and small-screen behavior is easy to audit here.
    ========================================================================== */
 @media (max-width: 850px) {
-  /* On small screens, .section already supplies the shared 24px page margin.
-     Remove the second muted-section inset so all sections align consistently. */
-  .section.muted > * {
+  /* Keep the section full-width on mobile, matching the desktop structure. */
+  .section {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* Use a more generous mobile margin for the main content sections.
-     Team keeps the shared .section margin of 24px. */
-  #research,
-  #publications,
-  #news,
-  #join,
-  #contact {
+  /* Direct section content controls the page margin at every screen size:
+     24px on desktop and 48px on mobile. */
+  .section > * {
     padding-left: 48px;
     padding-right: 48px;
   }
