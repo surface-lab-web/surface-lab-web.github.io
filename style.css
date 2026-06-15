@@ -837,7 +837,15 @@ a {
     font-size: 24px;
   }
 
-  .publication {
+  /* Limit member photos on wide mobile/landscape screens without narrowing
+     the person card or the text below each photo. */
+  .avatar {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+   
+   .publication {
     grid-template-columns: 1fr;
     gap: 10px;
   }
