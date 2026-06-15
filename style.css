@@ -806,7 +806,7 @@ a {
    /* Limit only the Research image on wide mobile/landscape screens.
      The theme text continues to use the full available content width. */
   .research-image-container {
-    max-width: 420px;
+    max-width: 520px;
     margin-left: auto;
     margin-right: auto;
   }
