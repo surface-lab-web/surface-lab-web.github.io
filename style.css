@@ -148,8 +148,7 @@ a {
   margin-bottom: 14px;
 }
 
-.card p,
-.join-box p {
+.card p {
   font-size: 17px;
   color: var(--gray-500);
 }
@@ -669,21 +668,55 @@ a {
 /* ==========================================================================
    JOIN section
    ========================================================================== */
-.join-box {
-  padding: 58px;
-  border: 1px solid var(--gray-200);
-  border-radius: 32px;
-  background: var(--gray-100);
+.join-content {
+  color: var(--gray-500);
 }
 
-.join-box h2 {
-  max-width: 850px;
-  margin-bottom: 22px;
-}
-
-.join-box p {
-  max-width: 720px;
+.join-overview {
+  max-width: var(--max-width);
   font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 54px;
+}
+
+.join-list {
+  display: grid;
+  border-top: 1px solid var(--gray-200);
+}
+
+.join-item {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 72px);
+  padding: 30px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.join-item h3 {
+  color: var(--black);
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.join-item p {
+  max-width: 780px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.join-note {
+  max-width: 900px;
+  margin-top: 34px;
+  color: var(--gray-800);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.join-note a {
+  color: var(--black);
+  font-weight: 600;
+  border-bottom: 1px solid var(--black);
 }
 
 /* ==========================================================================
@@ -803,15 +836,15 @@ a {
     padding: 34px 0;
   }
 
-   /* Limit only the Research image on wide mobile/landscape screens.
+  /* Limit only the Research image on wide mobile/landscape screens.
      The theme text continues to use the full available content width. */
   .research-image-container {
     max-width: 520px;
     margin-left: auto;
     margin-right: auto;
   }
- 
-   .research-theme-content {
+
+  .research-theme-content {
     max-width: 100%;
     padding-right: 0;
   }
@@ -852,8 +885,8 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
-   
-   .publication {
+
+  .publication {
     grid-template-columns: 1fr;
     gap: 10px;
   }
@@ -863,7 +896,23 @@ a {
     gap: 8px;
   }
 
-  .join-box {
-    padding: 34px;
+  .join-overview {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .join-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 26px 0;
+  }
+
+  .join-item h3 {
+    font-size: 20px;
+  }
+
+  .join-item p,
+  .join-note {
+    font-size: 17px;
   }
 }
