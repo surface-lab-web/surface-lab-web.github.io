@@ -21,9 +21,9 @@ const prevButton = document.querySelector(".carousel-arrow.prev");
 const nextButton = document.querySelector(".carousel-arrow.next");
 
 const captions = [
-  "Brochosome-inspired antireflective materials",
-  "Superhydrophobic nanostructures",
-  "Micro/nano fabrication"
+  "Mosquito Inspired Superhydrophobic Nanostructures",
+  "Antireflective Leafhopper Brochosome Particles",
+  "Cicada Wing Inspired Superhydrophobic Nanostructures"
 ];
 
 let currentSlide = 0;

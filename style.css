@@ -297,7 +297,7 @@ a {
 .carousel-caption {
   margin: 0 0 12px;
   color: rgba(255, 255, 255, 0.72);
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -507,7 +507,8 @@ a {
 }
 
 .profile-links {
-  display: flex;
+  /* Temporarily hidden until the PI profile links are ready to use. */
+  display: none;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -522,39 +523,43 @@ a {
   margin-bottom: 28px;
 }
 
-/* Team member cards: used by the Postdocs and Students subsections. */
-.person-card {
-  border: 1px solid var(--gray-200);
-  border-radius: 24px;
-  padding: 30px;
-  background: var(--white);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.team-subsection .grid.three {
+  grid-template-columns: 1fr;
+  gap: 34px;
 }
 
-.person-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+/* Team member cards: used by the Postdocs and Students subsections. */
+.person-card {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  align-items: center;
 }
 
 .person-card h3 {
-  font-size: 22px;
+  align-self: end;
+  font-size: 20px;
   letter-spacing: -0.03em;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .person-card p {
+  grid-column: 2;
+  align-self: start;
   font-size: 17px;
   color: var(--gray-500);
 }
 
 .avatar {
+  grid-row: 1 / span 2;
   width: 100%;
+  max-width: 280px;
   aspect-ratio: 1 / 1;
   border-radius: 20px;
   display: block;
   object-fit: cover;
   background: var(--gray-100);
-  margin-bottom: 22px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Optional tag style for future team/research labels. */
@@ -600,7 +605,7 @@ a {
 
 .pub-content h3 {
   max-width: 880px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
   margin-bottom: 10px;
 }
@@ -884,10 +889,25 @@ a {
     font-size: 24px;
   }
 
+  .person-card {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .person-card h3,
+  .person-card p {
+    grid-column: auto;
+  }
+
+  .person-card h3 {
+    margin-top: 22px;
+  }
+
   /* Limit member photos on wide mobile/landscape screens without narrowing
      the person card or the text below each photo. */
   .avatar {
-    max-width: 320px;
+    grid-row: auto;
+    max-width: 280px;
     margin-left: auto;
     margin-right: auto;
   }
