@@ -591,16 +591,42 @@ a {
 
 .publication {
   display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 32px;
-  padding: 34px 0;
+  grid-template-columns: 50px 1fr 150px;
+  gap: 30px;
+  padding: 17px 0;
   border-bottom: 1px solid var(--gray-200);
+  align-items: start;
+}
+
+/* Temporarily hidden publications. Remove this class in index.html to show them again. */
+.publication-hidden {
+  display: none;
 }
 
 .pub-number {
+  padding-top: 17px;
   font-size: 16px;
   color: var(--gray-500);
   letter-spacing: 0.08em;
+}
+
+.pub-image-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--gray-100);
+  align-self: center;
+}
+
+.pub-image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.pub-content {
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
 .pub-content h3 {
@@ -915,6 +941,11 @@ a {
   .publication {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .pub-image-container {
+    max-width: 220px;
+    margin-top: 12px;
   }
 
   .news-item {
